@@ -1,6 +1,6 @@
-# basic
+# Spring boot + svelte + ?
 
-Spring booth login(hardcoded) + svelte with really basic todo endpoint
+Spring boot login(hardcoded) + svelte with really basic todo endpoint
 
 
 ## build frontend
