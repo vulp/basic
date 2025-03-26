@@ -5,7 +5,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/auth")
 public class LoginController {
 
     @GetMapping("/login")
@@ -15,11 +14,11 @@ public class LoginController {
 
     @GetMapping("/success")
     public String success() {
-        return "success";
+        return "success";//todo remove
     }
 
     @GetMapping("/logout")
     public String logout() {
-        return "logout";
+        return "logout";//todo remove
     }
 }
