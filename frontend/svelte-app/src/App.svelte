@@ -43,7 +43,7 @@
 
   function logout() {
     fetch('/logout', { method: 'POST' })
-      .then(() => (window.location.href = '/auth/login'))
+      .then(() => (window.location.href = '/login'))
       .catch((error) => console.error('Logout failed:', error));
   }
 

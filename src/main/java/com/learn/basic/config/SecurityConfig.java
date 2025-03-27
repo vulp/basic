@@ -24,11 +24,11 @@ public class SecurityConfig {
 
     @Bean
     public InMemoryUserDetailsManager userDetailsService() {
-        UserDetails user = User.withUsername("user")
-                .password(passwordEncoder().encode("plaaplaa"))
+        UserDetails user = User.withUsername("")//hardcoded just for testing purpose
+                .password(passwordEncoder().encode(""))//hardcoded just for testing purpose
                 .roles("USER")
                 .build();
-        return new InMemoryUserDetailsManager(user);//TODO remove hardcoded stuff this is just for testing purpose
+        return new InMemoryUserDetailsManager(user);
     }
 
     @Bean
@@ -39,7 +39,7 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
-                .csrf(csrf -> csrf.disable())
+                .csrf(csrf -> csrf.disable())//csrf disable, example use jwt based login instead
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/auth/login", "/").permitAll()
                         .anyRequest().authenticated()
