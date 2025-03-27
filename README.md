@@ -12,5 +12,5 @@ npm run build
 
 files will go under spring resources/static for faster testing. Middleware would be nice option too
 
-test
+
 
